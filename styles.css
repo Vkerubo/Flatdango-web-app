@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header form {
+  display: flex;
+}
+
+header input[type="text"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+header button[type="submit"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0 0.25rem 0.25rem 0;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+section {
+  flex: 1 1 50%;
+  margin-bottom: 1rem;
+}
+
+section h2 {
+  margin: 0;
+}
+
+ul#films {
+  list-style: none;
+  padding: 0;
+}
+
+ul#films li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+ul#films li:hover {
+  background-color: #ddd;
+}
+
+ul#films li.selected {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+ul#films li.sold-out {
+  opacity: 0.5;
+}
+
+aside {
+  flex: 0 0 25%;
+  padding: 1rem;
+  background-color: #f2f2f2;
+}
+
+aside form {
+  display: flex;
+  flex-direction: column;
+}
+
+aside label {
+  margin-top: 0.5rem;
+}
+
+aside input[type="text"],
+aside input[type="number"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+aside button[type="submit"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+#movie-details img {
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+#buy-ticket {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+#buy-ticket:hover {
+  background-color: #3e8e41;
+}
+
+#buy-ticket:disabled {
+  background-color: #cccc
+}

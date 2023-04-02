@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flatdango</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Flatdango</h1>
+      <form id="search-form">
+        <input type="text" name="search" placeholder="Search by title...">
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <main>
+      <section id="films-section">
+        <h2>Now Showing:</h2>
+        <ul id="films"></ul>
+      </section>
+      <section id="movie-details">
+        <h2>Movie Details:</h2>
+        <div id="availability"></div>
+      </section>
+    </main>
+    <aside>
+      <form id="add-form">
+        <h2>Add a New Movie:</h2>
+        <label>Title:</label>
+        <input type="text" name="title">
+        <label>Poster:</label>
+        <input type="text" name="poster">
+        <label>Runtime:</label>
+        <input type="text" name="runtime">
+        <label>Showtime:</label>
+        <input type="text" name="showtime">
+        <label>Capacity:</label>
+        <input type="number" name="capacity">
+        <button type="submit">Add Movie</button>
+      </form>
+    </aside>
+    <script src="index.js"></script>
+  </body>
+</html>
