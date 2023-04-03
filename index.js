@@ -60,6 +60,7 @@ const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const filmsList = document.getElementById('films');
 
+
 searchForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const searchTerm = searchInput.value;
@@ -136,7 +137,7 @@ filmsList.addEventListener('click', (event) => {
     const showtime = event.target.dataset.showtime;
 
     // Send a POST request to the server to buy a ticket for the movie and showtime
-    fetch(`http://localhost:3000/films${movieId}/tickets`, {
+    fetch(`http://localhost:3000/films/${movieId}/tickets`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
