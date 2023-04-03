@@ -117,7 +117,7 @@ filmsList.addEventListener('click', (event) => {
   if (event.target.classList.contains('delete')) {
 
     // Send a DELETE request to the server to delete the movie
-    fetch(`/films/${movieId}`, {
+    fetch(`http://localhost:3000/films/${movieId}`, {
       method: 'DELETE'
     })
       .then(response => {
