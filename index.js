@@ -64,7 +64,7 @@ searchForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const searchTerm = searchInput.value;
 
-  fetch(`http://localhost:3000/films${searchTerm}`)
+  fetch(`http://localhost:3000/films/${searchTerm}`)
     .then(response => response.json())
     .then(data => {
       // Clear the current movie list
@@ -97,9 +97,9 @@ filmsList.addEventListener('click', (event) => {
       showtime: movieItem.querySelector('.showtime-input').value,
       poster: movieItem.querySelector('.poster-input').value
     };
-    
 
-    fetch(`/films/${movieId}`, {
+
+    fetch(`http://localhost:3000/films/${movieId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -115,6 +115,7 @@ filmsList.addEventListener('click', (event) => {
   }
 
   if (event.target.classList.contains('delete')) {
+
     // Send a DELETE request to the server to delete the movie
     fetch(`/films/${movieId}`, {
       method: 'DELETE'
@@ -135,12 +136,12 @@ filmsList.addEventListener('click', (event) => {
     const showtime = event.target.dataset.showtime;
 
     // Send a POST request to the server to buy a ticket for the movie and showtime
-    fetch(`/films/${movieId}/tickets`, {
+    fetch(`http://localhost:3000/films${movieId}/tickets`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ showtime })
+      body: JSON.stringify({ showtime: showtime })
     })
       .then(response => response.json())
       .then(data => {
